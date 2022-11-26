@@ -1,0 +1,234 @@
+*, *::after, *::before{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --blue: #004475;
+    --yellow: #ffc200;
+    --silver: #c1c1c1;
+}
+
+html{
+    font-size: 16px;
+}
+
+.input-group-append{
+    margin: 0;
+}
+
+.barYellow{
+    padding: 10px;
+    height: 51px;
+    background-color: var(--yellow);
+    text-align: center;
+}
+
+    .barYellow img{
+        width: 120px;
+        height: 31px;
+    }
+
+.barBlue{
+    height: 100%;
+    padding: 20px;
+    background-color: var(--blue);
+}
+
+.body{
+    display: flex;
+    height: calc(100vh - 102px);
+}
+
+    .seccion{
+        height: 100%;
+        display: flex;
+    }
+
+    .seccion--first{
+        width: 35%;
+        align-items: center;
+        justify-content: center;
+        border-right: 2px solid var(--silver);
+        background-color: var(--silver);
+    }
+        
+        .camposFiltro{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+            .camposFiltro__btnBuscar{
+                background-color: var(--blue);
+                margin-top: 10px;
+                color: #fff;
+            }
+
+    .seccion--second{
+        width: 65%;
+        flex-direction: column;
+        justify-content: center;
+        row-gap: 50px;
+        align-items: center;
+    }
+
+        .seccion--second p{
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        .info{
+            width: 90%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px 50px;
+            max-width: 992px;
+        }
+
+            .info div{
+                margin: 0;
+            }
+
+        .registroHorarios{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 10px;
+            padding: 0px 20px;
+            align-items: center;
+            max-width: 1292px;
+        }
+
+            .horario{
+                width: 200px;
+                display: flex;
+            }
+
+            .horario .form-control{
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+
+            .horario div button:nth-child(1){
+                border-radius: 0;
+                -webkit-border-radius: 0;
+                -moz-border-radius: 0;
+                -ms-border-radius: 0;
+                -o-border-radius: 0;
+}
+
+            .horario div button:nth-child(2){
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+            }
+
+@media screen and (max-width: 1200px) {
+    
+    .seccion--second{
+        row-gap: 20px;
+    }
+
+    .horario{
+        width: 180px;
+    }
+
+}
+
+@media screen and (max-width: 1016px){
+
+    .seccion--first{
+        width: 30%;
+    }
+
+    .seccion--second{
+        width: 70%;
+    }
+
+    .seccion--second{
+        row-gap: 0px;
+        justify-content: space-around;
+    }
+
+    .info{
+        gap: 15px 25px;
+    }
+
+    .registroHorarios{
+        gap: 10px 0px;
+        padding: 0px 15px;
+    }
+}
+
+@media screen and (max-width: 992px){
+    .seccion--first{
+        width: 100%;
+    }
+
+    .seccion--second{
+        display: none;
+    }
+
+    .info{
+        width: 100%;
+    }
+
+    .registroHorarios{
+        margin-top: 30px;
+        padding: 0px;
+    }
+
+        .horario{
+            width: 210px;
+        }
+
+}
+
+@media screen and (max-width: 470px){
+
+    .barBlue{
+        display: none;
+    }
+
+    .info{
+        grid-template-columns: 1fr;
+    }
+
+    .registroHorarios{
+        width: 100%;
+    }
+
+        .horario{
+            width: 100%;
+            padding: 5px;
+            flex-direction: column;
+        }
+
+            .horario .form-control{
+                width: 100%;
+                border-bottom-left-radius: 0px;
+                border-top-right-radius: .2rem;
+            }
+
+            .horario div{
+                width: 100%;
+            }
+                
+                .horario .input-group-append .btn{
+                    width: 50%;
+                    margin: 0;
+                }
+
+                .horario div button:nth-child(1){
+                    border-bottom-left-radius: .2rem;
+                }
+
+                .horario div button:nth-child(2){
+                    border-top-left-radius: 0px;
+                    border-top-right-radius: 0px;
+                    border-bottom-left-radius: 0px;
+                }
+
+        
+}
